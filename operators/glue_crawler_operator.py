@@ -13,8 +13,8 @@ class GlueCrawlerOperator(BaseOperator):
 
     Args:
         crawler_name (string). Name of the AWS Glue crawler to run.
-        aws_conn_id (string). AWS connection used. Defaults to aws-main
-        region_name (string). Region in which to run the Glue crawler. Defaults to eu-west-1.
+        aws_conn_id (string). AWS connection used. Defaults to None.
+        region_name (string). Region in which to run the Glue crawler. Defaults to None.
         polling interval (int). Number of seconds between glue crawler polls. Defaults to 60.
         *args: Variable length argument list.
         **kwargs: Arbitrary keyword arguments. See BaseOperator for more info.
@@ -24,8 +24,8 @@ class GlueCrawlerOperator(BaseOperator):
     def __init__(
         self,
         crawler_name,
-        aws_conn_id="aws-main",
-        region_name="eu-west-1",
+        aws_conn_id=None,
+        region_name=None,
         polling_interval=60,
         *args,
         **kwargs,

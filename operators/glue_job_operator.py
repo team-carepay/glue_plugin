@@ -13,8 +13,8 @@ class GlueJobOperator(BaseOperator):
 
     Args:
         job_name (string). Name of the AWS Glue job to run.
-        aws_conn_id (string). AWS connection used. Defaults to aws-main
-        region_name (string). Region in which to run the Glue Job. Defaults to eu-west-1.
+        aws_conn_id (string). AWS connection used. Defaults to None.
+        region_name (string). Region in which to run the Glue Job. Defaults to None.
         arguments (dict). Dictionary of arguments to pass to the Glue Job. Defaults to None.
         polling interval (int). Number of seconds between glue job polls. Defaults to 60.
         *args: Variable length argument list.
@@ -25,8 +25,8 @@ class GlueJobOperator(BaseOperator):
     def __init__(
         self,
         job_name,
-        aws_conn_id="aws-main",
-        region_name="eu-west-1",
+        aws_conn_id=None,
+        region_name=None,
         arguments=None,
         polling_interval=60,
         *args,
