@@ -12,10 +12,10 @@ class GlueCrawlerOperator(BaseOperator):
     The GlueCrawlerOperator will error when the Glue crawler failed completion.
 
     Args:
-        crawler_name (string). Name of the AWS Glue crawler to run.
-        aws_conn_id (string). AWS connection used. Defaults to None.
-        region_name (string). Region in which to run the Glue crawler. Defaults to None.
-        polling interval (int). Number of seconds between glue crawler polls. Defaults to 60.
+        crawler_name (string): Name of the AWS Glue crawler to run.
+        aws_conn_id (string): AWS connection used. Defaults to None.
+        region_name (string): Region in which to run the Glue crawler. Defaults to None.
+        polling interval (int): Number of seconds between glue crawler polls. Defaults to 60.
         *args: Variable length argument list.
         **kwargs: Arbitrary keyword arguments. See BaseOperator for more info.
     """

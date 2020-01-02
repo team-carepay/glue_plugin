@@ -12,11 +12,11 @@ class GlueJobOperator(BaseOperator):
     The GlueJobOperator will error when the Glue Job failed completion.
 
     Args:
-        job_name (string). Name of the AWS Glue job to run.
-        aws_conn_id (string). AWS connection used. Defaults to None.
-        region_name (string). Region in which to run the Glue Job. Defaults to None.
-        arguments (dict). Dictionary of arguments to pass to the Glue Job. Defaults to None.
-        polling interval (int). Number of seconds between glue job polls. Defaults to 60.
+        job_name (string): Name of the AWS Glue job to run.
+        aws_conn_id (string): AWS connection used. Defaults to None.
+        region_name (string): Region in which to run the Glue Job. Defaults to None.
+        arguments (dict): Dictionary of arguments to pass to the Glue Job. Defaults to None.
+        polling interval (int): Number of seconds between glue job polls. Defaults to 60.
         *args: Variable length argument list.
         **kwargs: Arbitrary keyword arguments. See BaseOperator for more info.
     """
