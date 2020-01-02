@@ -28,7 +28,7 @@ class GlueCrawlerOperator(BaseOperator):
         region_name=None,
         polling_interval=60,
         *args,
-        **kwargs,
+        **kwargs
     ):
         super().__init__(*args, **kwargs)
         self.aws_conn_id = aws_conn_id
